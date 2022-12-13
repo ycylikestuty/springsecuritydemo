@@ -15,7 +15,7 @@ public class AccountUser implements UserDetails, Serializable {
     private Long userId;
 
     //因为是 实现 UserDetails接口，而UserDetails接口中包含了以下的方法
-    // 所以必须包含以下属性
+    //所以必须包含以下属性
     private String password;
     private final String username;
     private final Collection<? extends GrantedAuthority> authorities;

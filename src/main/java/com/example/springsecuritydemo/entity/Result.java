@@ -2,13 +2,11 @@ package com.example.springsecuritydemo.entity;
 
 import lombok.Data;
 
-import java.io.Serializable;
-
 /**
  * @author ycy
  */
 @Data
-public class Result{
+public class Result {
     private int code;
     private String msg;
     private Object data;
@@ -21,7 +19,7 @@ public class Result{
         return fail(400, msg, null);
     }
 
-    public static Result success (int code, String msg, Object data) {
+    public static Result success(int code, String msg, Object data) {
         Result result = new Result();
         result.setCode(code);
         result.setMsg(msg);
@@ -29,7 +27,7 @@ public class Result{
         return result;
     }
 
-    public static Result fail (int code, String msg, Object data) {
+    public static Result fail(int code, String msg, Object data) {
         Result result = new Result();
         result.setCode(code);
         result.setMsg(msg);

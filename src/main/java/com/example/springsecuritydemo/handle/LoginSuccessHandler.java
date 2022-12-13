@@ -9,16 +9,12 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.Resource;
-import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-
-import static jdk.nashorn.internal.runtime.regexp.joni.Config.log;
 
 /**
  * @author ycy
@@ -40,7 +36,7 @@ public class LoginSuccessHandler implements AuthenticationSuccessHandler {
         //在JwtAuthenticationFilter中取出jwt
         String jwt = jwtUtils.generateToken(authentication.getName());
         response.setHeader(jwtUtils.getHeader(), jwt);
-        log.info("生成的jwt为:"+jwt);
+        log.info("生成的jwt为:" + jwt);
         Result success = Result.success("登录成功");
         outputStream.write(JSONUtil.toJsonStr(success).getBytes(StandardCharsets.UTF_8));
         outputStream.flush();

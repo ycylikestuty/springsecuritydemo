@@ -2,7 +2,6 @@ package com.example.springsecuritydemo.handle;
 
 import cn.hutool.json.JSONUtil;
 import com.example.springsecuritydemo.entity.Result;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;
@@ -19,7 +18,6 @@ import java.nio.charset.StandardCharsets;
  * 权限不足拦截器
  */
 @Component
-//@Slf4j
 public class JwtAccessDeniedHandler implements AccessDeniedHandler {
     //当用户权限不足时，会进入AccessDeniedHandler进行处理
     @Override

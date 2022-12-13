@@ -14,7 +14,7 @@ import java.util.Properties;
 @Configuration
 public class KaptchaConfig {
     @Bean
-    public DefaultKaptcha producer(){
+    public DefaultKaptcha producer() {
         Properties properties = new Properties();
         properties.put("kaptcha.border", "no");
         properties.put("kaptcha.textproducer.font.color", "black");
