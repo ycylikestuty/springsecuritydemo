@@ -3,6 +3,8 @@
 ## 1.1 获取验证码和随机码
 
 在网站打开http://localhost:8080/login页面，获取到验证码code和随机码userKey
+
+
 ![pic0](./images/pic0.png)
 
 同时观察idea中日志的输出，也可以看到code和userKey
